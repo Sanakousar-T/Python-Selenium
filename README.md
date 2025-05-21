@@ -5,7 +5,7 @@ syllabus:
 =================================
 1. introduction of selenium
 2. history of selenium
-3. selenium flavous
+3. selenium flavours
 4. how to launch empty browser
 (chrome, firefox, edge)
 5. webdriver methods
