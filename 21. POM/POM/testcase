@@ -1,0 +1,19 @@
+testcase1: gold loan
+----------
+step1: open the browser and enter url
+step2: click loans, gold loan and click on apply online
+step3: enter the amount and click on apply now
+step4: enter mobile number and click on get otp
+step5: close the browser
+
+testcase2: insurance
+----------
+step1: open the browser and enter url
+step2: click on insurance, health insurance and click on explore plans
+step3: click on select all check box and click on apply now
+step4: click on get quote of any insurance
+step5: enter mobile number and click on get otp
+step6: close the browser
+
+
+

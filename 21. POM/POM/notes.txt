@@ -1,0 +1,69 @@
+What is Page Object Model (POM)?
+One way to help write clean and well-tested code is to create a Page Object Model.
+A Page Object Model (POM) is a set of classes designed to represent one or more web pages. It is a way of using objects to represent elements on the
+page. This enables you to write code that is simple and easy to understand. It also helps you to keep your tests well-structured and understandable.
+
+There are many benefits to creating a POM such as:
+
+1.Testing Quality – The POM helps you write tests that are easy to understand and maintain.
+This can help improve the quality of your testing process to improve the readability and reliability of the scripts.
+2.Site Maintenance – It is easier to maintain the site over time. Suppose if something got changed on any page,
+we could easily find the functions and locators that need to be changed by that page class.
+3.Team Collaboration – The POM can help with collaboration between team members and improve the efficiency of your team significantly.
+Overall Productivity – The POM can make it easier for new team members to get up to speed and boost overall team productivity.
+4.Reusing Code – Using POM, we can reuse our functions in different Test Scripts by importing them from Page Class.
+It doesn’t require writing the same functions in different test cases.
+With all of these benefits, it is clear that a POM can be a valuable tool for any organization. By creating one, you can help improve the
+quality of your software testing process and team collaboration.
+
+*pom will consists of 3 stages,
+1.declaration:
+    here we should develope method for all the elements of a webpage
+2.initialization:
+   we should initialize a constructor with driver and an argument and make it as instance(self variable)
+3.utilization:
+   import the pom class module and create an object and utilize/call all the methods in test function(pytest)
+
+rules of pom:
+-------------
+*entire webpage should be consider as individual POM file.
+(1entire webpage = 1POM class)
+*each POM class should consists of and all the element of the webpage should be present in that POM file
+*POM file name and class should be same as webpage name
+*POM file and class should not starts/ends with test.
+*method name should be same as element name and shoule not starts with test keyword
+*one constructor should be present in POM class and should accept driver as argument.
+##########################################################################################################
+"""
+conftest:
+=======
+*conftest is a special file, in pytest which we can store only fixtures.
+*conftest is like a repository.
+*file name should be conftest.py
+*always fixture name should be the 1st argument in each test function.
+*main advantage of conftest file is without writing import stmt  in test_case module file, we can
+directly access.
+*because when we write fixture name always 1st it will go and search inside conftest file and execute.
+"""
+#############################################################################################################################################
+"""
+how to generate html report:
+****************************
+*to generate html report of test case execution we should install "pytest-html" module/plugin.
+*file --> settings -> click on project -> click on python interpreter --> click on plus -->
+search for pytest-html --> click on install package --> once after installing "successful message will appear"
+
+*to generate html report and it will store in current location,
+    >>pytest -rp filename.py --html="report-name.html"
+*to generate html report on batch execution,
+    >>pytest -rp --html="report-name.html"
+(in above both execution will store in current location)
+
+*command to generate html file and store in particular location/folder,
+    >>pytest -rp --html="../folder-name/report-name.html"
+
+note:
+-----
+*insted of -rp(report portal) we can write -vs, but -vs wont print message in report, so when ever
+we are generating html report better to write -rp.
+"""
